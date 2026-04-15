@@ -1,0 +1,11 @@
+<h2>Expenses History</h2>
+
+<a href="{% url 'add_transaction' %}">Add Transaction</a>
+
+<ul>
+    {% for transaction in object_list %}
+        <li>
+            {{ transaction.transaction_type }} - {{ transaction.amount }} - {{ transaction.category }}
+        </li>
+    {% endfor %}
+</ul>
